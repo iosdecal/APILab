@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qfx-yH-Uqg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="CgB-eH-I36">
+            <objects>
+                <viewController id="Qfx-yH-Uqg" customClass="PlayerViewController" customModule="Play" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ys1-6z-Qwi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UtQ-O4-9e5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UtQ-O4-9e5" secondAttribute="height" multiplier="1:1" id="YAM-CH-Uc5"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-En-iHS">
+                                <rect key="frame" x="0.0" y="475" width="375" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-5k-hRp">
+                                        <rect key="frame" x="0.0" y="26" width="125" height="50"/>
+                                        <state key="normal" image="previous"/>
+                                        <connections>
+                                            <action selector="previousTrackTapped:" destination="Qfx-yH-Uqg" eventType="touchUpInside" id="RIQ-bt-0HK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohc-su-Hdt">
+                                        <rect key="frame" x="125" y="26" width="125" height="50"/>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="playOrPauseTrack:" destination="Qfx-yH-Uqg" eventType="touchUpInside" id="eyE-uC-9gg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gW-Tl-xao">
+                                        <rect key="frame" x="250" y="26" width="125" height="50"/>
+                                        <state key="normal" image="next"/>
+                                        <connections>
+                                            <action selector="nextTrackTapped:" destination="Qfx-yH-Uqg" eventType="touchUpInside" id="iPz-TL-hPP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Biz-dv-SQ5">
+                                <rect key="frame" x="136" y="400" width="103" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-lZ-Nts">
+                                <rect key="frame" x="166.5" y="432.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vPv-Wz-hPU" firstAttribute="trailing" secondItem="Rfv-En-iHS" secondAttribute="trailing" id="1iy-yo-gVi"/>
+                            <constraint firstItem="RWP-lZ-Nts" firstAttribute="top" secondItem="Biz-dv-SQ5" secondAttribute="bottom" constant="8.5" id="5gU-Pn-TYK"/>
+                            <constraint firstItem="Rfv-En-iHS" firstAttribute="top" secondItem="UtQ-O4-9e5" secondAttribute="bottom" constant="100" id="6Ci-p6-qav"/>
+                            <constraint firstItem="Biz-dv-SQ5" firstAttribute="centerX" secondItem="ys1-6z-Qwi" secondAttribute="centerX" id="AlW-Ne-ms9"/>
+                            <constraint firstItem="vPv-Wz-hPU" firstAttribute="bottom" secondItem="Rfv-En-iHS" secondAttribute="bottom" constant="90" id="CwK-pf-auI"/>
+                            <constraint firstItem="UtQ-O4-9e5" firstAttribute="top" secondItem="ys1-6z-Qwi" secondAttribute="top" id="JO7-Xv-BwJ"/>
+                            <constraint firstItem="RWP-lZ-Nts" firstAttribute="centerX" secondItem="ys1-6z-Qwi" secondAttribute="centerX" id="WrJ-nK-kN6"/>
+                            <constraint firstItem="Rfv-En-iHS" firstAttribute="top" secondItem="RWP-lZ-Nts" secondAttribute="bottom" constant="22" id="X6P-hv-Ml7"/>
+                            <constraint firstItem="RWP-lZ-Nts" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vPv-Wz-hPU" secondAttribute="leading" constant="5" id="YaV-hx-7xY"/>
+                            <constraint firstItem="UtQ-O4-9e5" firstAttribute="leading" secondItem="vPv-Wz-hPU" secondAttribute="leading" id="a6v-On-Q3b"/>
+                            <constraint firstItem="UtQ-O4-9e5" firstAttribute="trailing" secondItem="vPv-Wz-hPU" secondAttribute="trailing" id="cPS-yx-Zom"/>
+                            <constraint firstItem="Biz-dv-SQ5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vPv-Wz-hPU" secondAttribute="leading" constant="5" id="dRR-Bq-LQx"/>
+                            <constraint firstItem="Rfv-En-iHS" firstAttribute="leading" secondItem="vPv-Wz-hPU" secondAttribute="leading" id="kgP-h7-Gcx"/>
+                            <constraint firstItem="Biz-dv-SQ5" firstAttribute="top" secondItem="UtQ-O4-9e5" secondAttribute="bottom" constant="25" id="sf7-ZU-QeH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vPv-Wz-hPU"/>
+                    </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="RWP-lZ-Nts" id="8yO-p4-ygs"/>
+                        <outlet property="playPauseButton" destination="Ohc-su-Hdt" id="Ekh-ah-BDk"/>
+                        <outlet property="titleLabel" destination="Biz-dv-SQ5" id="KBh-hH-dak"/>
+                        <outlet property="trackImageView" destination="UtQ-O4-9e5" id="Eo1-6x-PiK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctP-zW-Iib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87.200000000000003" y="154.27286356821591"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="next" width="50" height="50"/>
+        <image name="play" width="50" height="50"/>
+        <image name="previous" width="50" height="50"/>
+    </resources>
+</document>
