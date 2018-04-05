@@ -28,7 +28,7 @@ the end of this lab, you should be able to play, pause, skip and rewind songs on
   in the following classes:
  * SoundCloudAPI.swift
    * This is where you will do the chunk of the work. In the `loadTracks` function, we have created a URL session, however, we have not added any task to the session. Your job is to create a `dataTask` passing in the appropriate API endpoint URL (checkout the '/resolve' endpoint) using the passed in playlist URL, which will make an api call to SoundCloud and return the data we need. Then you will process the returned data from the url. In processing the data, you will create a an Array with objects of type 'Track', go through the returned data and get tracks (songs) that have been returned, initialize them as instances of the 'Track' class and append them to the Array you created earlier. Make sure you pass the values in your tracks Array to a completion before ending anything.
-  * Track.swift 
+ * Track.swift 
    * For this class, you will be processing the data that is returned by the API. As such, it is recommended that you start working with the API class first. As was covered in lecture, the data that is returned by the API is in JSON format, which is structured as a Dictionary with Strings as keys and 'Any' as values. Your job is to get the song id, the name of the artist, and the title of the song. Refer to the instructions in the 'TODO' for the class. 
 
 ## Submission
