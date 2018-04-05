@@ -26,7 +26,7 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        soundCloudAPI.loadTracks(didLoadTracks)
+        soundCloudAPI.loadTracks(from: "https://soundcloud.com/bruin-pollard/sets/uc-berkeley-math-1b-professor-coward", withCompletionHandler: didLoadTracks)
         player = AVQueuePlayer()
 
         playPauseButton.setImage(UIImage(named: "pause")?.withRenderingMode(.alwaysTemplate), for: UIControlState.selected)

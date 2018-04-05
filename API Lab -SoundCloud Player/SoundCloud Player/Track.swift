@@ -7,15 +7,15 @@ struct Track: Equatable {
     var artworkURL: String?
     var streamURL: URL
 
-    init?(attributes: [String: AnyObject?]) {
-        id = 0// TODO: Change this value
-        artist = ""// TODO: Change this value
+    init?(fromAttributes attributes: [String: AnyObject?]) {
+        id = 0 // TODO: Change this value
+        artist = "" // TODO: Change this value
         title = "" //TODO: Change this value
 
-        var originalSize: String
-        var largerSize: String
-
         if let artworkURL = attributes["artwork_url"] as? String {
+            var originalSize: String
+            var largerSize: String
+
             self.artworkURL = artworkURL
             if artworkURL.last == "0" {
                 originalSize = "80&height=80"
@@ -30,7 +30,8 @@ struct Track: Equatable {
 
         if let streamable = attributes["streamable"] as? Bool, streamable {
             let clientID = Bundle.main.infoDictionary!["client_id"] as! String
-            streamURL = URL(string: "https://api.soundcloud.com/tracks/\(id)/stream?client_id=\(clientID)")!
+            // TODO: Replace with correct API endpoint.
+            streamURL = URL(string: "")!
         } else {
             return nil
         }
