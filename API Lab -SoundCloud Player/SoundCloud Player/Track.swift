@@ -8,9 +8,9 @@ struct Track: Equatable {
     var streamURL: URL
 
     init?(attributes: [String: AnyObject?]) {
-        id = attributes["id"] as! Int
-        artist = (attributes["user"] as! [String: AnyObject])["username"] as! String
-        title = attributes["title"] as! String
+        id = 0// TODO: Change this value
+        artist = ""// TODO: Change this value
+        title = "" //TODO: Change this value
 
         var originalSize: String
         var largerSize: String
