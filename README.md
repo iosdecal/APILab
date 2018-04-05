@@ -16,7 +16,7 @@ the end of this lab, you should be able to play, pause, skip and rewind songs on
 ## Instructions
 **Create a SoundCloud Player App**
 
-* Files
+## Files
   * Track.swift - In the Model folder, this class will process a returned token from the SoundClouds API and verify that 
     it the content is streamable. You will be editing this file.
   * SoundCloudAPI.swift - Also in the Model folder, this class only has the 'loadTracks' function, which, as it gives away,
@@ -25,9 +25,8 @@ the end of this lab, you should be able to play, pause, skip and rewind songs on
     when a user plays the song, clicks next or makes any request to our API. You will not be editing this class.
   * The other files are just supporting files. The abover three are the most important for this lab.
 
-* TODO
-  This is supposed to be a fast and easy lab so we can give you more time to work on your custom app and ask questions about it.
-  So you will only be editing two files. If you try running the app right now, it will crash. To make it run, do the following 
+## TODO
+  This is supposed to be a fast and easy lab so we can give you more time to work on your custom app and ask questions about it. If you try running the app right now, it will crash. To make it run, do the following 
   in the following classes:
  * Track.swift 
    * For this class, you will be processing the data that is returned by the API. As such, it is recommended that you start
@@ -42,6 +41,6 @@ the end of this lab, you should be able to play, pause, skip and rewind songs on
       initialize them as instances of the 'Track' class and append them to the Array you created earlier. Make sure you pass the values
       in your tracks Array to a completion before ending anything.
 
-* Submission
+## Submission
   * To get credit for this lab, make sure you get checked by a TA before the deadline.
   
