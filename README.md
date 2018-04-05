@@ -23,7 +23,7 @@ the end of this lab, you should be able to play, pause, skip and rewind songs on
     loads tracks from SoundCloud and passes them to the Tracks class for processing.  You will also be editing this file.
   * PlayerViewController.swift - In the ViewControllers folder, this class is our ViewController which will update the UI 
     when a user plays the song, clicks next or makes any request to our API. You will not be editing this class.
-  * The other files are just supporting files. The abover three are the most important for this lab.
+  * The other files are just supporting files. The above three are the most important for this lab.
 
 ## TODO
   This is supposed to be a fast and easy lab so we can give you more time to work on your custom app and ask questions about it. If you try running the app right now, it will crash. To make it run, do the following 
