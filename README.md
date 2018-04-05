@@ -1,4 +1,4 @@
-# Lab 6: Introduction to APIs: SoundCloud Player
+# Lab 6: Introduction to APIs - SoundCloud Player
 
 ## Due
 Wednesday, April 11 at 11:59 PM
